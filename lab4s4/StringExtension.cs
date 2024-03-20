@@ -45,7 +45,7 @@ namespace lab4s4
             List<int> wordsLength = new List<int>();
 
 
-            string[] words = input.Split(new[] { ' ', '.', ',', ';', ':', '!','?'});
+            string[] words = input.Split(new[] { ' ', '.', ',', ';', ':', '!','?'}, StringSplitOptions.RemoveEmptyEntries);
             foreach (string word in words) {
                 wordsLength.Add(word.Length);
             }
