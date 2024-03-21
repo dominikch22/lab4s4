@@ -42,13 +42,16 @@ namespace lab4s4
         }
 
         public void CountWords(object sender, RoutedEventArgs args) {
-            string wordsLength = "";
+            string wordsLength = "[ ";
             int[] arrayOfLengths = countWordsInput.Text.WordsLength();
             foreach (int i in arrayOfLengths) {
-                wordsLength += i + " ";
+                wordsLength += i + ", ";
             }
-            countWordsResult.Content = wordsLength;
+            wordsLength = wordsLength.Substring(0, wordsLength.Length - 2);
 
+            wordsLength += " ]";
+
+            countWordsResult.Content = wordsLength;
 
         }
 
